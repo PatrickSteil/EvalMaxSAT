@@ -175,9 +175,9 @@ namespace {
 template<typename ...T>
 void MonPrint(const T&... args) {
 #ifdef NDEBUG
-    //std::cout << "c " << MonPrint_Chrono.tacSec() << ": " << toString(args...) << std::endl;
+    // std::cout << "c " << (int)(MonPrint_Chrono.tacSec()) << ": " << toString(args...) << std::endl;
 #else
-    std::cout << "c " << (int)(MonPrint_Chrono.tacSec()) << ": " << toString(args...) << std::endl;
+    // std::cout << "c " << (int)(MonPrint_Chrono.tacSec()) << ": " << toString(args...) << std::endl;
 #endif
 }
 

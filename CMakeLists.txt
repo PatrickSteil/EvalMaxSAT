@@ -44,6 +44,11 @@ target_link_libraries(${projectName}
     ${externLibs}
 )
 
+# Set NDEBUG for Release builds
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    target_compile_definitions(${projectName} PRIVATE NDEBUG)
+endif()
+
 install(TARGETS ${projectName}
     DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
